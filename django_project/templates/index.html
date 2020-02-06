@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ judul }} </title>
+</head>
+<body>
+	<!-- <img style="width:100%;" src="{% static "img/banner_home.png" %}" alt=""> -->
+	
+	<!-- Static File With Var -->
+	<img style="width:100% ;" src="{% static banner %}" alt="">
+	<h1>{{subjudul}} || To Django Project ||</h1>
+	<p>This Website Is Using Lastest Django</p>
+
+	<ul>
+		{# Template Tags #}
+
+		{% for link,name in nav%}
+			<li>
+				<a href=" {{link}} ">{{name}}</a>
+			</li>
+		{% endfor %}
+
+
+
+	</ul>
+</body>
+</html>
