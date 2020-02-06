@@ -4,9 +4,7 @@ from django.shortcuts import render
 
 # Variable
 context={
-    'judul':'Welcome To Django Project || Blog',
-    'subjudul':'This Is Blog ',
-    'banner':'img/banner_blog.png',
+    'judul':'Blog Page',
     'nav': [
         ['/','Home'],
         ['/blog/cerita','Cerita Blog'],

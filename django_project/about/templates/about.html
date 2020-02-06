@@ -5,18 +5,6 @@
 	<title> {{ judul }}  </title>
 </head>
 <body>
-	<!-- <img style="width: 100%;" src=" {% static 'img/banner_about.png' %} " alt=""> -->
-	<!-- Using Static File Var -->
-	<img style="width:100%;" src=" {% static banner %} " alt="">
-	<h1>{{subjudul}}</h1>
-	<p>This About Is Using Lastest Django</p>
 
-	<ul>
-	{% for link,name in nav  %}
-		<li>
-			<a href="{{link}}">{{name}}</a>
-		</li>
-	{% endfor %}
-</ul>
 </body>
 </html>
