@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Variable
 context = {
-        'judul':'Welcome To Django project',
-        'subjudul':'Selamat Welcome',
+        'judul':'Welcome To Django Project',
+        'subjudul':'~~Rest In Peace Kobe~~',
         'banner' : 'img/banner_home.png',
         'nav':[
             ['/','Home'],
