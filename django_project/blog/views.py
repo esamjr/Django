@@ -15,5 +15,5 @@ context={
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html', context)
+    return render(request,'blog/index.html', context)
 

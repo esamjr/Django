@@ -1,14 +1,21 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{judul}}{{subjudul}}</title>
-</head>
-<body>
-    
-</body>
-</html> 
+{% block app_css %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+{% endblock app_css %}
+
+{% block header %}
+  <h1 class="font-weight-bold text-center text-white">{{judul}}</h1>
+{% endblock header %}
+
+
+{% block content-1 %}
+  	<h1>Content blog 1</h1>
+{% endblock content-1 %}
+
+
+{% block content-2 %}
+	<h1>Content blog 2</h1>
+{% endblock content-2 %}
+

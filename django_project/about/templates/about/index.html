@@ -1,19 +1,18 @@
 {% extends "base.html" %}
-
 {% load static %}
 
 {% block app_css %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "/css/style.css" %}">
 {% endblock app_css %}
 
 {% block header %}
-	<h1 class="display-5 text-center font-weight-bold" style="color:gold;">{{subjudul}}</h1>
+	<h1 class="text-center text-white font-weight-bold">{{judul}}</h1>
 {% endblock header %}
 
 {% block content-1 %}
-	<h1>Content-1</h1>
+	<h1>Content About</h1>
 {% endblock content-1 %}
 
 {% block content-2 %}
-	<h1>Content-2</h1>
+	<h1>Content About</h1>
 {% endblock content-2 %}
