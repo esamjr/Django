@@ -1,23 +1,29 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
-
-{% block app_css %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+{% include "snippets/styles.html" %}
+{% block app_css %}  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock app_css %}
 
 {% block header %}
-  <h1 class="font-weight-bold text-center text-white">{{judul}}</h1>
+<h1 class="display-5 text-center text-white font-weight-bold">{{judul}}</h1>
 {% endblock header %}
-
-
-{% block content-1 %}
-  	<h1>Content blog 1</h1>
-{% endblock content-1 %}
-
-
-{% block content-2 %}
-	<h1>Content blog 2</h1>
-{% endblock content-2 %}
-
-	
-
+  
+  
+{% block content %}
+<div class="container bg-dark text-warning shadow" style="margin-top:-10px" id="myBody">
+  <div class="col" style="height:auto">
+    {% for post in Posts %}
+    <a href="/" class="text-warning">
+      <h2>{{post.title}}</h2>
+    </a>
+      <hr>
+      <p>{{post.body}}</p>
+      <p>Category: {{post.category}}</p>
+      <p>{{post.datePost}}</p>
+    <br><hr class="border">
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
+  

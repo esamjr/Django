@@ -1,50 +1,38 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>{{ judul }} </title>
 	{% include "snippets/styles.html" %}
-
 	{% block app_css %}
-		
 	{% endblock app_css %}
 </head>
 <body>
-	
-	{% include "snippets/navbar.html" %}
 
-	<!-- <img style="width:100%;" src="{% static "img/banner_home.png" %}" alt=""> -->
+	{% include "snippets/navbar.html" %}
 
 	<div class="jumbotron jumbotron-fluid">
 	  <div  class="container">
-
-	  {% block header %}
-	  	
-	  {% endblock header %}
-
+	  	{% block header %}{% endblock header %}
 	  </div>
 	</div>
 
 	<div class="container-fluid">
-		<div class="container bg-white text-dark shadow" style="margin-top:-10px" id="myBody">
-			<div class="row" style="height:300px">
-				{% block content-1 %}
-					
-				{% endblock content-1 %}
-			</div>
-		</div>
-	</div>
-	<div class="container bg-dark text-white shadow">
-		<div class="row" style="height:300px">
-
-			{% block content-2 %}
+		
+		{% block content-1 %}	
+		{% endblock content-1 %}
+		
+		{% block content-2 %}
+		{% endblock content-2 %}
+	
+		{% block content %}	
+		{% endblock content %}
 			
-			{% endblock content-2 %}
-
-		</div>
+		
 	</div>
-
+	<br>
+	<br>
+	<hr>
 	{% include "snippets/scripts.html" %}
 
 </body>

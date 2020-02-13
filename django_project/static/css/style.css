@@ -4,3 +4,10 @@
 	background-size: cover;
 	height: 600px;
 }
+.a{
+	text-decoration: none;
+	color: yellow;
+}
+.a:hover{
+	text-decoration: none;
+}

@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block app_css %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock app_css %}
 
 {% block header %}
@@ -11,9 +11,18 @@
 {% endblock header %}
 
 {% block content-1 %}
-	<h1>Content-1</h1>
+<div class="container bg-white text-dark shadow" style="margin-top:-10px" id="myBody">
+	<div class="row" style="height:300px">
+		<h1>Content-1</h1>
+	</div>
+</div>
+
 {% endblock content-1 %}
 
 {% block content-2 %}
+<div class="container bg-dark text-white shadow">
+	<div class="row" style="height:300px">
 	<h1>Content-2</h1>
+	</div>
+</div>
 {% endblock content-2 %}

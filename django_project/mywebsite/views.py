@@ -5,18 +5,13 @@ context = {
         'judul':'Welcome To Django Project',
         'subjudul':'~~Rest In Peace Kobe~~',
         'banner' : 'img/banner_home.png',
-        'nav':[
-            ['/','Home'],
-            ['/blog','Blog'],
-            ['/about','About'],
-            ['/contact','Contact'],
-        ]
     }
-
 # Method Views Index
-
 def index(request):
-	return render(request,'index.html', context)
-
-def about(request):
-    return render(request,'about.html')
+    if request.method == 'POST':
+        print("INI Method POST")
+        print(request.POST['username'])
+        print(request.POST['address'])
+    else:
+        print("ini Method Get")
+    return render(request,'index.html', context)
